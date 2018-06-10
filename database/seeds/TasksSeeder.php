@@ -14,9 +14,26 @@ class TasksSeeder extends Seeder
     {
         $data = [
             [
-                'task_name' => 'Make some laravel api',
-                'task_description' => 'Реализовать API для доступа к данным из таблицы (только SELECT). 
-                                        В проекте должен быть один интерфейс, который из ссылки вида https://hostname.com/tableName получает параметром имя таблицы “tableName”.'
+                'task_name' => 'Example Sentences for tasks',
+                'task_description' => 'A regret for the mistakes of yesterday must not, however, blind us to the tasks of today.
+
+The tasks we face are difficult, and we can accomplish them only if we work together.
+
+No one spoke; the three workers kept at their tasks as if no other person had been in the room with them.
+
+One after another the men came to report the completion of their tasks.
+
+There he plied his tasks so diligently that he excelled all in book-learning.
+
+I have therefore had to create for myself some tasks which will hold me to my chains.
+
+How these expeditions accomplished their tasks shall be told later.
+
+The overseers were brutal when the slaves did not do the tasks set for them.
+
+These, also, make easier and bolder the electrician\'s tasks.
+
+The daily tasks and pleasures were picked up where they had been dropped.'
             ]
         ];
 
