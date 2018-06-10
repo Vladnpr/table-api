@@ -3,7 +3,9 @@
 namespace App\Exceptions;
 
 use Exception;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\Routing\Exception\RouteNotFoundException;
 
 class Handler extends ExceptionHandler
 {
@@ -46,6 +48,28 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        if($exception instanceof TableData)
+        {
+            return $exception->getResponse();
+        }
+
+        if($exception instanceof RouteNotFoundException){
+            $data = [
+                'code' => 0,
+                'message' => 'Path you requested not exist',
+                'details' => ''
+            ];
+            return response()->json($data, 404);
+        }
+        if($exception instanceof ModelNotFoundException) {
+            $data = 	[
+                'code' => 2,
+	            'message' => 'Not found',
+	            'details' => 'Entity (or table) not found'
+            ];
+            return response()->json($data, 404);
+        }
+
         return parent::render($request, $exception);
     }
 }

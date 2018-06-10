@@ -16,3 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/{name}', 'Api\ApiController@getTableName')->name('api');
+Route::get('/{name}/{id}', 'Api\ApiController@getTableItem')->name('api.name');

@@ -2,12 +2,14 @@
 
 namespace App\Providers;
 
+use App\Contracts\ApiRepository;
+use App\Repositories\Eloquent\EloquentApiRepository;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
     private $repositories = [
-
+        ApiRepository::class => EloquentApiRepository::class
     ];
     /**
      * Bootstrap services.

@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/{name}', 'Api\ApiController@getTableName')->name('api');
+Route::get('/{name}/{id}', 'Api\ApiController@getTableItem')->name('api.name');
