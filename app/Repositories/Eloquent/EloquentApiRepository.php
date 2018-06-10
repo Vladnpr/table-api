@@ -33,8 +33,6 @@ class EloquentApiRepository implements ApiRepository
         if(class_exists($class_name)){
             $this->model = new $class_name;
         }
-
-        return -1;
     }
 
     private function checkTable($table_name)

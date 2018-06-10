@@ -3,10 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Exceptions\TableData;
-use App\Models\Post;
 use App\Services\ApiService;
 use App\Http\Controllers\Controller;
-use Mockery\Exception;
 
 class ApiController extends Controller
 {
