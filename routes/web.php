@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/{name}', 'Api\ApiController@getTableName')->name('api');
